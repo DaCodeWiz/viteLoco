@@ -1,0 +1,16 @@
+.video-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    background: #282820;
+    cursor: pointer;
+}
+
+.video-player video {
+    height: 100vh;
+    width: 100%;
+    background: #282820;
+}
