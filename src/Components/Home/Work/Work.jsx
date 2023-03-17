@@ -17,7 +17,7 @@ export default function Work() {
 	const workRef = useRef(null);
 	const munkey = useRef(null);
 	const primera = useRef(null);
-	const beats = useRef(null);
+	const beatsRef = useRef(null);
 	const heading = useRef(null);
 
 	function handleMouseEnter(event) {
@@ -81,11 +81,11 @@ export default function Work() {
 				{ y: 110, scrollTrigger: { trigger: munkey.current, scrub: true } }
 			);
 
-			//beats
+			//beatsRef
 			gsap.fromTo(
-				beats.current,
+				beatsRef.current,
 				{ y: 0 },
-				{ y: -120, scrollTrigger: { trigger: beats.current, scrub: true } }
+				{ y: -120, scrollTrigger: { trigger: beatsRef.current, scrub: true } }
 			);
 
 			//heading scroll trigger opening
@@ -187,7 +187,7 @@ export default function Work() {
 				<div
 					id='block-2'
 					className='block'
-					ref={beats}
+					ref={beatsRef}
 					onMouseEnter={handleMouseEnter}
 					onMouseLeave={handleMouseLeave}>
 					<img
@@ -199,7 +199,7 @@ export default function Work() {
 						playsInline
 						loop
 						muted
-						disablePictureInPicture
+						disablePictureInPicture=''
 						className='video'
 						src={beats}
 						type='video/mp4' />

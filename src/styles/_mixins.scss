@@ -16,7 +16,7 @@ $breakpoints: (
   }
 
   @if $type == min {
-    $width: $width - 1vw;
+    $width: $width - 1px;
   }
 
   @media only screen and (#{$type}-width: $width) {
