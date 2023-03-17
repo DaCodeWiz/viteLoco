@@ -65,7 +65,7 @@ function HomeReel() {
                     <video src={bgVid} playsInline loop muted ref={video} className="video" />
                     <h2 ref={heading1}>My Work</h2>
                 </div>
-                <p id="reel-bottom-p">Payhip is where I keep source code<br />along with other digital assets :P</p>
+                <p id="reel-bottom-p">Payhip is where i keep source code<br />along with other digital assets :P</p>
             </div>
             {isPlaying ? <VideoPlayer handleClick={handleClick} handleScroll={handleScroll} /> : null}
         </div>
