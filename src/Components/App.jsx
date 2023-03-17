@@ -16,7 +16,7 @@ export default function App() {
 	useEffect(() => {
 		const cursor = new MouseFollower();
 		const lenis = new Lenis({
-			lerp: 0.08,
+			lerp: 0.13,
 		});
 
 		lenis.on('lenis-scroll');

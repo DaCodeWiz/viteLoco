@@ -1,0 +1,225 @@
+.mf-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  direction: ltr;
+  contain: layout style size;
+  pointer-events: none;
+  transition: opacity 0.3s, color 0.4s;
+}
+.mf-cursor:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transform: scale(0.2);
+  background: currentColor;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out, opacity 0.1s;
+}
+.mf-cursor.-inverse {
+  color: #48a3a0;
+}
+@supports (mix-blend-mode: exclusion) {
+  .mf-cursor.-exclusion {
+    mix-blend-mode: exclusion;
+  }
+  .mf-cursor.-exclusion:before {
+    background: #48a3a0;
+  }
+}
+@supports (mix-blend-mode: difference) {
+  .mf-cursor.-difference {
+    mix-blend-mode: difference;
+  }
+}
+.mf-cursor.-difference:before {
+  background: #48a3a0;
+}
+.mf-cursor.-pointer:before {
+  transform: scale(0.15);
+}
+.mf-cursor.-text:before {
+  opacity: 0.85;
+  transform: scale(1.95);
+}
+.mf-cursor.-text.-active:before {
+  transform: scale(1.6);
+  transition-duration: 0.2s;
+}
+.mf-cursor.-icon:before {
+  transform: scale(1.5);
+}
+.mf-cursor.-icon.-active:before {
+  transform: scale(1.4);
+}
+.mf-cursor.-hidden:before {
+  transform: scale(0);
+}
+.mf-cursor-text {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0) rotate(10deg);
+  opacity: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  transition: opacity 0.4s, transform 0.3s;
+}
+.mf-cursor.-text .mf-cursor-text, .mf-cursor.-icon .mf-cursor-text {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.mf-cursor-media {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+}
+.mf-cursor-media img, .mf-cursor-media video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .mf-cursor-media img, .mf-cursor-media video {
+    position: static;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: translateZ(0);
+  }
+}
+.mf-cursor-media-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(0) translateZ(0);
+  padding: 1px;
+  opacity: 0;
+  border-radius: 50%;
+  transition: transform 0.35s, opacity 0.2s 0.2s;
+}
+.mf-cursor.-media .mf-cursor-media-box {
+  opacity: 1;
+  transform: scale(0.696);
+  transition-duration: 0.4s, 0.4s;
+  transition-delay: 0s, 0s;
+}
+
+footer a {
+  color: #dedfe1;
+  text-decoration: none;
+}
+
+footer button {
+  background: none;
+  border: none;
+  color: #dedfe1;
+  padding: 0;
+  font-weight: 300;
+  font-size: 1.2vw;
+  z-index: 100;
+}
+
+footer {
+  padding: 13.88889vw 0 5.55556vh;
+  background: #283139;
+  width: 100vw;
+  height: 100vh;
+  color: #dedfe1;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#footer-content {
+  display: flex;
+}
+
+#footer-content p:nth-child(2) {
+  font-size: 1.66667vw;
+  line-height: 2.22222vw;
+  margin-top: 1.80556vw;
+}
+
+footer .background {
+  position: absolute;
+  right: 3.47222vw;
+  width: 69.44444vw;
+  top: 0;
+  padding-top: 20vh;
+  padding-left: 10vw;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+
+footer .background video {
+  width: 50vw;
+}
+
+footer hr {
+  height: 1px;
+  background: #5B544C;
+  border: none;
+  margin: 5vw 0;
+}
+
+#footer-final-p {
+  max-width: 80vw;
+  font-weight: 300;
+  font-size: 1.2vw;
+}
+
+.footer-list ul {
+  padding-bottom: 8vh;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  gap: 3rem;
+  transition: all 350ms;
+  text-align: center;
+}
+
+.link-list li a {
+  display: inline-block;
+  color: #dedfe1;
+  text-decoration: none;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.link-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  transform: translateX(50%);
+  width: 99%;
+  height: 2px;
+  border-radius: 2px;
+  background: #dedfe1;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 450ms cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}
+.link-list li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}/*# sourceMappingURL=Footer.css.map */

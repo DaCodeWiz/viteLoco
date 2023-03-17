@@ -1,0 +1,239 @@
+.mf-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 250;
+  direction: ltr;
+  contain: layout style size;
+  pointer-events: none;
+  transition: opacity 0.3s, color 0.4s;
+}
+.mf-cursor:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  display: block;
+  width: 48px;
+  height: 48px;
+  transform: scale(0.2);
+  background: currentColor;
+  border-radius: 50%;
+  transition: transform 0.25s ease-in-out, opacity 0.1s;
+}
+.mf-cursor.-inverse {
+  color: #48a3a0;
+}
+@supports (mix-blend-mode: exclusion) {
+  .mf-cursor.-exclusion {
+    mix-blend-mode: exclusion;
+  }
+  .mf-cursor.-exclusion:before {
+    background: #48a3a0;
+  }
+}
+@supports (mix-blend-mode: difference) {
+  .mf-cursor.-difference {
+    mix-blend-mode: difference;
+  }
+}
+.mf-cursor.-difference:before {
+  background: #48a3a0;
+}
+.mf-cursor.-pointer:before {
+  transform: scale(0.15);
+}
+.mf-cursor.-text:before {
+  opacity: 0.85;
+  transform: scale(1.95);
+}
+.mf-cursor.-text.-active:before {
+  transform: scale(1.6);
+  transition-duration: 0.2s;
+}
+.mf-cursor.-icon:before {
+  transform: scale(1.5);
+}
+.mf-cursor.-icon.-active:before {
+  transform: scale(1.4);
+}
+.mf-cursor.-hidden:before {
+  transform: scale(0);
+}
+.mf-cursor-text {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0) rotate(10deg);
+  opacity: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  transition: opacity 0.4s, transform 0.3s;
+}
+.mf-cursor.-text .mf-cursor-text, .mf-cursor.-icon .mf-cursor-text {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.mf-cursor-media {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px;
+}
+.mf-cursor-media img, .mf-cursor-media video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .mf-cursor-media img, .mf-cursor-media video {
+    position: static;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transform: translateZ(0);
+  }
+}
+.mf-cursor-media-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(0) translateZ(0);
+  padding: 1px;
+  opacity: 0;
+  border-radius: 50%;
+  transition: transform 0.35s, opacity 0.2s 0.2s;
+}
+.mf-cursor.-media .mf-cursor-media-box {
+  opacity: 1;
+  transform: scale(0.696);
+  transition-duration: 0.4s, 0.4s;
+  transition-delay: 0s, 0s;
+}
+
+.loader-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #87aab1;
+}
+
+.counter-container {
+  overflow: hidden;
+  height: 30vw;
+  padding-right: 10vw;
+  padding-bottom: 32vh;
+}
+
+.counter-container h3 {
+  z-index: 1;
+  margin-top: 0px;
+  margin-bottom: 0vw;
+  color: #fff;
+  font-size: 10vh;
+  line-height: 10vw;
+  font-weight: 300;
+  list-style: none;
+}
+
+.counter-container h3:hover {
+  text-decoration: none;
+}
+
+#hero-container {
+  width: 100vw;
+  max-height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 10vw 0;
+}
+
+.hero-background {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background: #1D2C27;
+  max-width: 100%;
+  transform: translateY(100vh) rotate(10deg);
+  transform-origin: center;
+}
+
+.hero-background img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -45px;
+     object-position: 0 -45px;
+  width: 100%;
+  pointer-events: none;
+  -o-object-position: center;
+     object-position: center;
+}
+
+#hero-container h1 {
+  transform: translateX(-1.4vw);
+  letter-spacing: -0.79861vw;
+  line-height: 12.70833vw;
+}
+
+#hero-container span {
+  font-size: 1.66vw;
+  font-weight: 300;
+  line-height: 2.3vw;
+  display: block;
+}
+
+.top-span-container {
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  color: #b75c5f;
+  mix-blend-mode: difference;
+}
+
+.bottom-span {
+  margin-top: 7vw;
+  mix-blend-mode: difference;
+}
+
+.hero-title-anim {
+  height: 16vw;
+  overflow: hidden;
+}
+
+#hero-container p, #hero-container span {
+  transform-origin: left center;
+}
+
+.my-name {
+  color: #87aab1;
+}
+
+.mf-cursor {
+  color: #b75c5f;
+}/*# sourceMappingURL=Hero.css.map */
