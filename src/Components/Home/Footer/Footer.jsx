@@ -10,11 +10,6 @@ import './Footer.scss';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const openInNewTab = (url) => {
-	const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
-	if (newWindow) newWindow.opener = null;
-};
-
 export default function Footer() {
 	MouseFollower.registerGSAP(gsap);
 	const cursor = new MouseFollower()
@@ -110,7 +105,7 @@ export default function Footer() {
 											{emailCopied ? 'Copied!' : label}
 										</button>
 									) : (
-										<a href={value} onClick={() => openInNewTab(value)}>
+										<a href={value} target='_blank' rel='noopener noreferrer'>
 											{label}
 										</a>
 									)}
