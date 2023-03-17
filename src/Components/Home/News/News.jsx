@@ -3,10 +3,10 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import MouseFollower from 'mouse-follower'
 import './News.scss'
-import vid1 from '../../../images/caspian.mp4'
-import img2 from '../../../images/sebastien-bourguet-ZI1FT0B68K8-unsplash.jpg'
-import img3 from '../../../images/casey-olsen-2s11AHnb_SU-unsplash.jpg'
-import img4 from '../../../images/video1.mp4'
+import caspian from '../../../images/caspian.mp4'
+import cameraMan from '../../../images/sebastien-bourguet-ZI1FT0B68K8-unsplash.jpg'
+import oregonWelcome from '../../../images/casey-olsen-2s11AHnb_SU-unsplash.jpg'
+import lonelyZone from '../../../images/video1.mp4'
 
 gsap.registerPlugin(ScrollTrigger)
 MouseFollower.registerGSAP(gsap)
@@ -77,7 +77,7 @@ export default function News() {
 							muted
 							autoPlay
 							disablePictureInPicture 
-							src={vid1} 
+							src={caspian} 
 							type='video/mp4' />
 					</div>
 					<div className='news-media' ref={image1}>
@@ -94,11 +94,11 @@ export default function News() {
 						<picture id='3643671' data-v-4a179df6=''>
 							<source
 								type='image/webp'
-								srcSet={img2}
+								srcSet={cameraMan}
 							/>
 							<img
 								data-cursor-text='Photos!'
-								src={img3}
+								src={oregonWelcome}
 								alt='a guy holding a camera'
 								loading='lazy'
 							/>
@@ -108,7 +108,7 @@ export default function News() {
 						<picture data-cursor-text='Oregon!'>
 							<source
 								type='image/webp'
-								srcSet={img3}
+								srcSet={oregonWelcome}
 							/>
 							<img
 								alt='welcome sign'
@@ -124,7 +124,7 @@ export default function News() {
 							muted
 							autoPlay
 							disablePictureInPicture>
-							<source src={img4} type='video/mp4' />
+							<source src={lonelyZone} type='video/mp4' />
 						</video>
 					</div>
 				</div>

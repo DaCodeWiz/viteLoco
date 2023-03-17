@@ -157,14 +157,13 @@ export default function Work() {
 					<div
 						id='block-1'
 						data-cursor-text='Try it!'
-						className='block'
+						className='block munkey'
 						ref={munkey}
 						onMouseEnter={handleMouseEnter}
 						onMouseLeave={handleMouseLeave}>
 						<img
 							src={munkeyTrailer}
 							alt={'picture of dude being cash money'}
-							className='munkeyTrailer'
 						/>
 						<video
 							playsInline=''
