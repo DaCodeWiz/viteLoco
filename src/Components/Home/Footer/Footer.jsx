@@ -64,7 +64,7 @@ export default function Footer() {
 	const personalLinks = [
 		{ label: 'Email', value: 'jpearsonbusiness@gmail.com' },
 		{ label: 'LinkedIn', value: 'http://www.linkedin.com/in/jakepearson123' },
-		{ label: 'Dribbble', value: 'https://dribbble.com/jakepearson123' },
+		{ label: 'Dribbble', value: 'https://dribbble.com/jopearson' },
 		{ label: 'Behance', value: 'https://www.behance.net/jakepearson5' },
 		{ label: 'GitHub', value: 'https://github.com/DaCodeWiz' },
 	];
