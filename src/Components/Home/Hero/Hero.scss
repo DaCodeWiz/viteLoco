@@ -40,7 +40,7 @@
 
 #hero-container {
     width: 100vw;
-    max-height: 100%;
+    // max-height: 100%;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -63,6 +63,7 @@
     max-width: 100%;
     transform: translateY(100vh) rotate(10deg);
     transform-origin: center;
+    background-size: 100% auto;
 }
 
 .hero-background img {
@@ -91,7 +92,7 @@
     margin-bottom: 5vw;
     color: #b75c5f;
     mix-blend-mode: difference;
-    text-shadow: #1D2C27 1px 1px 1px 0.5vw;
+    text-shadow: #1D2C27 1px 1px 4px 6px;
 }
 
 .bottom-span {
@@ -114,4 +115,14 @@
 
 .mf-cursor {
     color: #b75c5f;
+}
+
+@media only screen and (min-width: 576px) {
+    /* Styles for screens larger than or equal to 576px (e.g., small mobile devices) */
+
+    .counter-container {
+        height: 40vw; /* Adjust the height for smaller screens */
+        padding-right: 5vw; /* Adjust the padding for smaller screens */
+        padding-bottom: 10vh; /* Adjust the padding for smaller screens */
+    }
 }

@@ -6,6 +6,7 @@ import Lenis from '@studio-freight/lenis';
 import Loading from './LoadingScreen/Loading';
 import MouseFollower from 'mouse-follower';
 import '../styles/index.scss';
+import OrientationMessage from './Orientation';
 
 MouseFollower.registerGSAP(gsap);
 const HomeLazy = React.lazy(() => import('./Home/Home'));
@@ -16,7 +17,7 @@ export default function App() {
 	useEffect(() => {
 		const cursor = new MouseFollower();
 		const lenis = new Lenis({
-			lerp: 0.13,
+			lerp: 0.08,
 		});
 
 		lenis.on('lenis-scroll');
@@ -32,12 +33,13 @@ export default function App() {
 		const timer = setTimeout(() => {
 			setIsLoading(false);
 		}, 4300);
-
+		
 		return () => clearTimeout(timer);
 	}, []);
 
 	return (
 		<div className='center column'>
+			<OrientationMessage />
 			{isLoading && <Loading />}
 			<React.Suspense fallback={<Loading />}>
 				<HomeLazy onLoad={() => setIsLoading(false)} />

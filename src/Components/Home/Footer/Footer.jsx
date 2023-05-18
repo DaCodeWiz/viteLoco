@@ -121,7 +121,6 @@ export default function Footer() {
 					loop
 					muted
 					disablePictureInPicture
-					className
 					src={footerVid} 
 					type='video/mp4'
 					autoPlay />
