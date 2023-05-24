@@ -1,5 +1,5 @@
 #scroll-cta {
-  color: #CDC9BB;
+  color: #cdc9bb;
   mix-blend-mode: difference;
   position: absolute;
   top: 92vh;
@@ -8,4 +8,4 @@
   opacity: 0.5;
   transition: 0.3s;
   z-index: 2;
-}/*# sourceMappingURL=ScrollCTA.css.map */
+} /*# sourceMappingURL=ScrollCTA.css.map */

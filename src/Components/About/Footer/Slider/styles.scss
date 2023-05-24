@@ -1,0 +1,26 @@
+.full {
+  height: 90vh;
+  width: 100vw;
+  background-color: none;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+.image-track {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  left: 8%;
+  top: 50%;
+  transform: translate(50%, -50%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+
+  .image {
+  width: 45vmin;
+  height: 55vmin;
+  position: relative;
+  object-fit: cover;
+  object-position: 100% center;
+  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.23));
+  }
+}

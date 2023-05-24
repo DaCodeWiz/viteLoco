@@ -1,84 +1,84 @@
-@import '../../../styles/_mixins.scss';
+@import "../../../styles/_mixins.scss";
 
 #news-container {
-    color: #dedfe1;
-    padding: 12vh 0;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background: #87aab1;
-    z-index: 2;
+  color: #dedfe1;
+  padding: 12vh 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #87aab1;
+  z-index: 2;
 }
 
 #news-media-container {
-    height: 66.25vw;
-    margin: 0 0;
+  height: 66.25vw;
+  margin: 0 0;
 }
 
 #news-container img,
 #news-container video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 
-    & .mf-cursor {
-        height: 52px;
-        width: 52px;
-    }
+  & .mf-cursor {
+    height: 52px;
+    width: 52px;
+  }
 }
 
 #news-container .news-media:nth-child(1) {
-    margin-top: 18vh;
-    width: 32vw;
-    height: 42vh;
-    mix-blend-mode: soft-light;
+  margin-top: 18vh;
+  width: 32vw;
+  height: 42vh;
+  mix-blend-mode: soft-light;
 }
 
 #news-container .news-media:nth-child(2) {
-    position: absolute;
-    height: 34.79167vh;
-    width: 26.31944vw;
-    top: 7vh;
-    left: -23.09722vw;
+  position: absolute;
+  height: 34.79167vh;
+  width: 26.31944vw;
+  top: 7vh;
+  left: -23.09722vw;
 }
 
 #news-container .news-media:nth-child(3) {
-    position: absolute;
-    width: 25.08333vw;
-    height: 27.15278vh;
-    top: 4.23611vh;
-    left: 24vw;
+  position: absolute;
+  width: 25.08333vw;
+  height: 27.15278vh;
+  top: 4.23611vh;
+  left: 24vw;
 }
 
 #news-container .news-media:nth-child(4) {
-    position: absolute;
-    width: 27.31944vw;
-    height: 27.63889vw;
-    top: 39.93056vh;
-    left: -19.09722vw;
+  position: absolute;
+  width: 27.31944vw;
+  height: 27.63889vw;
+  top: 39.93056vh;
+  left: -19.09722vw;
 }
 
 #news-container .news-media:nth-child(5) {
-    position: absolute;
-    width: 30.31944vw;
-    height: 30.31944vh;
-    top: 39.93056vh;
-    left: 24.58333vw;
+  position: absolute;
+  width: 30.31944vw;
+  height: 30.31944vh;
+  top: 39.93056vh;
+  left: 24.58333vw;
 }
 
 .news-small-heading {
-    font-size: .97222vw;
+  font-size: 0.97222vw;
 }
 
 #news-container h2 {
-    text-align: center;
-    line-height: 9.7vw;
-    letter-spacing: -.34722vw;
-    margin: 3.47222vh 0 2.08333vh;
+  text-align: center;
+  line-height: 9.7vw;
+  letter-spacing: -0.34722vw;
+  margin: 3.47222vh 0 2.08333vh;
 }
 
 .news-text {
-    text-align: center;
-    font-size: 1.66667vw;
-    line-height: 2.22222vw;
+  text-align: center;
+  font-size: 1.66667vw;
+  line-height: 2.22222vw;
 }

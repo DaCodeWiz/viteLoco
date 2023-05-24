@@ -1,35 +1,36 @@
 {
-	"name": "portfolio",
-	"private": true,
-	"version": "0.0.0",
-	"type": "module",
-	"scripts": {
-		"dev": "vite",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"dependencies": {
-		"@studio-freight/lenis": "^1.0.0",
-		"@testing-library/jest-dom": "^5.16.4",
-		"@testing-library/react": "^14.0.0",
-		"@testing-library/user-event": "^14.4.3",
-		"gsap": "^3.11.4",
-		"mouse-follower": "^1.1.2",
-		"pace-js": "^1.2.4",
-		"postcss": "^8.4.21",
-		"react": "^18.2.0",
-		"react-dom": "^18.2.0",
-		"react-router-dom": "^6.9.0",
-		"react-scripts": "5.0.1",
-		"sass": "^1.59.2",
-		"sass-mq": "^6.0.0"
-	},
-	"devDependencies": {
-		"@types/react": "^18.0.27",
-		"@types/react-dom": "^18.0.10",
-		"@vitejs/plugin-react": "^3.1.0",
-		"sharp": "^0.31.3",
-		"vite": "^4.1.4",
-		"vite-plugin-image-optimizer": "^1.1.2"
-	}
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@studio-freight/lenis": "^1.0.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "gsap": "^3.11.4",
+    "mouse-follower": "^1.1.2",
+    "pace-js": "^1.2.4",
+    "postcss": "^8.4.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.59.2",
+    "sass-mq": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "prettier": "2.8.8",
+    "sharp": "^0.31.3",
+    "vite": "^4.1.4",
+    "vite-plugin-image-optimizer": "^1.1.2"
+  }
 }

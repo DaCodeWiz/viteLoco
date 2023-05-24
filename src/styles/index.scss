@@ -1,11 +1,11 @@
 // Import mixins
-@import 'mixins';
+@import "mixins";
 
 // Import fonts
-@import 'fonts';
+@import "fonts";
 
 // Import cursor styles
-@import 'cursor';
+@import "cursor";
 
 // Root variables
 @media screen and (min-width: 968px) {
@@ -15,22 +15,22 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-    --smallest-font-size: .75rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+    --smallest-font-size: 0.75rem;
   }
 }
 
-@media only screen and (min-width:370px) {
+@media only screen and (min-width: 370px) {
   :root {
     --big-font-size: 2.5rem;
     --h1-font-size: 1.875rem;
     --h2-font-size: 1.25rem;
     --h3-font-size: 1.125rem;
-    --normal-font-size: .875rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-    --smallest-font-size: .688rem;
+    --normal-font-size: 0.875rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+    --smallest-font-size: 0.688rem;
   }
 }
 
@@ -44,7 +44,7 @@
 // HTML styles
 html {
   height: 100%;
-  font-family: 'Lausanne', 'sans-serif';
+  font-family: "Lausanne", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -55,7 +55,7 @@ html {
     display: none;
   }
 
-  &::selection{
+  &::selection {
     background: #b75c5f;
   }
 }
@@ -76,10 +76,10 @@ body {
     display: none;
   }
 
-  @include mq('tablet') {
+  @include mq("tablet") {
     font-size: 1.25rem;
   }
-  @include mq('phone') {
+  @include mq("phone") {
     font-size: 1.5rem;
   }
 }
@@ -91,19 +91,23 @@ body {
 }
 
 // Headings styles
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 400;
 }
 
 h1 {
   font-size: 17.36111vw;
   line-height: 16vw;
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 
 h2 {
   font-size: 10vw;
-  font-weight: 300 !important;
+  font-weight: 300;
 }
 
 // Icon styles
@@ -148,3 +152,23 @@ html.lenis {
   flex-direction: column;
 }
 
+// lenis styles
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+   pointer-events: none;
+} 

@@ -46,7 +46,7 @@
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #CDC9BB;
+  border-top-color: #cdc9bb;
   animation: spin 3s linear infinite;
 }
 
@@ -81,4 +81,4 @@
   100% {
     transform: rotate(360deg);
   }
-}/*# sourceMappingURL=Loading.css.map */
+} /*# sourceMappingURL=Loading.css.map */

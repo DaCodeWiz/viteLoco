@@ -1,128 +1,128 @@
-@import '../../../styles/cursor.scss';
+@import "../../../styles/cursor.scss";
 
 .loader-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    display: flex;
-    padding-right: 50px;
-    padding-bottom: 30px;
-    justify-content: flex-end;
-    align-items: flex-end;
-    background-color: #87aab1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  padding-right: 50px;
+  padding-bottom: 30px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #87aab1;
 }
 
 .counter-container {
-    overflow: hidden;
-    height: 30vw;
-    padding-right: 10vw;
-    padding-bottom: 32vh;
+  overflow: hidden;
+  height: 30vw;
+  padding-right: 10vw;
+  padding-bottom: 32vh;
 }
 
 .counter-container h3 {
-    z-index: 1;
-    margin-top: 0px;
-    margin-bottom: 0vw;
-    color: #fff;
-    font-size: 10vh;
-    line-height: 10vw;
-    font-weight: 300;
-    list-style: none;
+  z-index: 1;
+  margin-top: 0px;
+  margin-bottom: 0vw;
+  color: #fff;
+  font-size: 10vh;
+  line-height: 10vw;
+  font-weight: 300;
+  list-style: none;
 }
 
-.counter-container h3:hover{
-    text-decoration: none;
+.counter-container h3:hover {
+  text-decoration: none;
 }
-
 
 #hero-container {
-    width: 100vw;
-    // max-height: 100%;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: relative;
-    overflow: hidden;
-    padding: 10vw 0;
+  width: 100vw;
+  // max-height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+  padding: 10vw 0;
 }
 
 .hero-background {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    background: #1D2C27;
-    max-width: 100%;
-    transform: translateY(100vh) rotate(10deg);
-    transform-origin: center;
-    background-size: 100% auto;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background: #1d2c27;
+  max-width: 100%;
+  transform: translateY(100vh) rotate(10deg);
+  transform-origin: center;
+  background-size: 100% auto;
 }
 
 .hero-background img {
-    object-fit: cover;
-    object-position: 0 -45px;
-    width: 100%;
-    pointer-events: none;
-    object-position: center;
+  object-fit: cover;
+  object-position: 0 -45px;
+  width: 100%;
+  pointer-events: none;
+  object-position: center;
 }
 
 #hero-container h1 {
-    transform: translateX(-1.4vw);
-    letter-spacing: -.79861vw;
-    line-height: 12.70833vw;
+  transform: translateX(-1.4vw);
+  letter-spacing: -0.79861vw;
+  line-height: 12.70833vw;
 }
 
 #hero-container span {
-    font-size: 1.66vw;
-    font-weight: 300;
-    line-height: 2.3vw;
-    display: block;
+  font-size: 1.66vw;
+  font-weight: 300;
+  line-height: 2.3vw;
+  display: block;
 }
 
 .top-span-container {
-    margin-top: 10vw;
-    margin-bottom: 5vw;
-    color: #b75c5f;
-    mix-blend-mode: difference;
-    text-shadow: #1D2C27 1px 1px 4px 6px;
+  margin-top: 10vw;
+  margin-bottom: 5vw;
+  color: #b75c5f;
+  mix-blend-mode: difference;
+  text-shadow: #1d2c27 1px 1px 4px 6px;
 }
 
 .bottom-span {
-    margin-top: 7vw;
-    mix-blend-mode: difference;
+  margin-top: 7vw;
+  mix-blend-mode: difference;
 }
 
 .hero-title-anim {
-    height: 16vw;
-    overflow: hidden;
+  height: 16vw;
+  overflow: hidden;
 }
 
-#hero-container p, #hero-container span {
-    transform-origin: left center;
+#hero-container p,
+#hero-container span {
+  transform-origin: left center;
 }
 
 .my-name {
-    color: #87aab1;
+  color: #87aab1;
 }
 
 .mf-cursor {
-    color: #b75c5f;
+  color: #b75c5f;
 }
 
 @media only screen and (min-width: 576px) {
-    /* Styles for screens larger than or equal to 576px (e.g., small mobile devices) */
+  /* Styles for screens larger than or equal to 576px (e.g., small mobile devices) */
 
-    .counter-container {
-        height: 40vw; /* Adjust the height for smaller screens */
-        padding-right: 5vw; /* Adjust the padding for smaller screens */
-        padding-bottom: 10vh; /* Adjust the padding for smaller screens */
-    }
+  .counter-container {
+    height: 40vw; /* Adjust the height for smaller screens */
+    padding-right: 5vw; /* Adjust the padding for smaller screens */
+    padding-bottom: 10vh; /* Adjust the padding for smaller screens */
+  }
 }
