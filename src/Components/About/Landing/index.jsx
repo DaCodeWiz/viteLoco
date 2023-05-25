@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MouseFollower from 'mouse-follower';
+// import Selfie from "./Selfie";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./styles.scss";
@@ -46,6 +47,7 @@ function index() {
 
   return (
     <div className="about" data-cursor="-inverse">
+      {/* <Selfie /> */}
       <div className="right-col fade-in-text">
         <h3 className="top-text">
           I'm a student who is mesmerized by clean visuals. Whether it by

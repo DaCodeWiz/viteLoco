@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import ScrollCTA from "../ScrollCTA/ScrollCTA";
-import BG from "@assets/images/laanding-2.jpeg";
+import BG from "@assets/images/laanding-2.webp";
 import MouseFollower from "mouse-follower";
 import "./Hero.scss";
 

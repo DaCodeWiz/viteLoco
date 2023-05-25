@@ -4,8 +4,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MouseFollower from "mouse-follower";
 import "./News.scss";
 import caspian from "../../../assets/images/caspian.mp4";
-import cameraMan from "../../../assets/images/sebastien-bourguet-ZI1FT0B68K8-unsplash.jpg";
-import oregonWelcome from "../../../assets/images/casey-olsen-2s11AHnb_SU-unsplash.jpg";
+import cameraMan from "../../../assets/images/sebastien-bourguet-ZI1FT0B68K8-unsplash.webp";
+import oregonWelcome from "../../../assets/images/casey-olsen-2s11AHnb_SU-unsplash.webp";
 import lonelyZone from "../../../assets/images/video1.mp4";
 
 gsap.registerPlugin(ScrollTrigger);

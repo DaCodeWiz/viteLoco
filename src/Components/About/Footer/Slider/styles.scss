@@ -1,7 +1,7 @@
 .full {
   height: 90vh;
   width: 100vw;
-  background-color: none;
+  background: #283139;
   margin: 0rem;
   overflow: hidden;
 }
@@ -12,7 +12,6 @@
   position: relative;
   left: 8%;
   top: 50%;
-  transform: translate(50%, -50%); 
   user-select: none; /* -- Prevent image highlighting -- */
 
   .image {
@@ -21,6 +20,5 @@
   position: relative;
   object-fit: cover;
   object-position: 100% center;
-  filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.23));
   }
 }

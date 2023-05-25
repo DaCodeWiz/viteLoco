@@ -2,20 +2,33 @@
 
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import dbz from '@assets/sliderImages/dbz.jpeg';
-import wallpaper1 from '@assets/sliderImages/don.jpeg';
-import wallpaper2 from '@assets/sliderImages/demon.jpeg';
-import wallpaper3 from '@assets/sliderImages/genji.jpeg';
-import wallpaper4 from '@assets/sliderImages/kendrick.jpeg';
-import wallpaper5 from '@assets/sliderImages/rl.jpeg';
+import Lenis from '@studio-freight/lenis';
+import dbz from '@assets/sliderImages/dbz.webp';
+import wallpaper1 from '@assets/sliderImages/don.webp';
+import wallpaper2 from '@assets/sliderImages/demon.webp';
+import wallpaper3 from '@assets/sliderImages/genji.webp';
+import wallpaper4 from '@assets/sliderImages/kendrick.webp';
+import wallpaper5 from '@assets/sliderImages/rl.webp';
 import "./styles.scss";
 
 function index() {
   const imageTrackRef = useRef(null);
-  const image = useRef(null);
-  const arrowRef = useRef(null);
 
   useEffect(() => {
+
+    const lenis = new Lenis({
+      lerp: 0.04,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    lenis.on("lenis-scroll");
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
 
     const handleOnDown = (e) =>
       (imageTrackRef.current.dataset.mouseDownAt = e.clientX);
@@ -31,7 +44,7 @@ function index() {
 
       const mouseDelta =
         parseFloat(imageTrackRef.current.dataset.mouseDownAt) - e.clientX;
-      const maxDelta = window.innerWidth / 0.8;
+      const maxDelta = window.innerWidth / 1;
 
       const percentage = (mouseDelta / maxDelta) * -100;
       const nextPercentageUnconstrained =
@@ -47,7 +60,7 @@ function index() {
         {
           transform: `translate(${nextPercentage}%, -50%)`,
         },
-        { duration: 1350, fill: "forwards" }
+        { duration: 1050, fill: "forwards" }
       );
 
       for (const image of imageTrackRef.current.getElementsByClassName(
@@ -57,7 +70,7 @@ function index() {
           {
             objectPosition: `${100 + nextPercentage}% center`,
           },
-          { duration: 1350, fill: "forwards" }
+          { duration: 1050, fill: "forwards" }
         );
       }
     };
@@ -82,7 +95,7 @@ function index() {
       { x: "-25vw", duration: 2.17, delay: 0.57, ease: "power4.inOut" }
     );
    
-  }, []);
+  }, [requestAnimationFrame]);
 
   return (
     <div className="full">

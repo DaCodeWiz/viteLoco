@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     const cursor = new MouseFollower();
     const lenis = new Lenis({
-      erp: 0.075,
+      lerp: 0.075,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
 

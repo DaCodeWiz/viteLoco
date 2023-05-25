@@ -5,7 +5,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MouseFollower from "mouse-follower";
 import footerVid from "@assets/vids/footer-3.mp4";
-import selfie from "@assets/images/selfie.png";
 import "./Footer.scss";
 
 gsap.registerPlugin(ScrollTrigger);

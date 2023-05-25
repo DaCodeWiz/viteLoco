@@ -7,7 +7,7 @@ import sharp from "sharp";
 export default defineConfig({
   resolve: {
     alias: {
-      "@assets": "/src/assets",
+      "@assets": "src/assets",
     },
   },
   server: {

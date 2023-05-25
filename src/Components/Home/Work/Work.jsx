@@ -5,8 +5,8 @@ import MouseFollower from "mouse-follower";
 import WK1 from "@assets/images/primera.mp4";
 import WK2 from "@assets/vids/munkeyTrailer.mp4";
 import beats from "@assets/images/beats-ad.mp4";
-import primeraSC from "@assets/images/primera-sc.png";
-import munkeyTrailer from "@assets/images/MunkeyPic.png";
+import primeraSC from "@assets/images/primera-sc.webp";
+import munkeyTrailer from "@assets/images/MunkeyPic.webp";
 import "./Work.scss";
 
 MouseFollower.registerGSAP(gsap);
@@ -20,11 +20,11 @@ export default function Work() {
   const heading = useRef(null);
 
   function handleMouseEnter(event) {
-    //play video
+    // play video
     const video = event.target.children[1];
-    if (video ? video.classList.contains("video") : false) video.play();
+    if (video && video.classList.contains("video")) video.play();
 
-    //animation
+    // animation
     const text = event.target.children[2]?.children[0];
     if (text) {
       gsap.killTweensOf(text);
@@ -37,11 +37,11 @@ export default function Work() {
   }
 
   function handleMouseLeave(event) {
-    //pause video
+    // pause video
     const video = event.target.children[1];
-    if (video ? video.classList.contains("video") : false) video.pause();
+    if (video && video.classList.contains("video")) video.pause();
 
-    //animation
+    // animation
     const text = event.target.children[2]?.children[0];
     if (text) {
       gsap.killTweensOf(text);
@@ -67,25 +67,33 @@ export default function Work() {
           "-pointer": "a, button",
         },
       });
+      
       // primera
-      gsap.fromTo(
-        primera.current,
-        { y: -20 },
-        { y: 120, scrollTrigger: { trigger: primera.current, scrub: true } }
-      );
-      //munkey
-      gsap.fromTo(
-        munkey.current,
-        { y: -100 },
-        { y: 110, scrollTrigger: { trigger: munkey.current, scrub: true } }
-      );
+      if (primera.current) {
+        gsap.fromTo(
+          primera.current,
+          { y: -20 },
+          { y: 120, scrollTrigger: { trigger: primera.current, scrub: true } }
+        );
+      }
+
+      // munkey
+      if (munkey.current) {
+        gsap.fromTo(
+          munkey.current,
+          { y: -100 },
+          { y: 110, scrollTrigger: { trigger: munkey.current, scrub: true } }
+        );
+      }
 
       //beatsRef
+      if (beatsRef.current) {
       gsap.fromTo(
         beatsRef.current,
-        { y: 0 },
+        { y: -50 },
         { y: -120, scrollTrigger: { trigger: beatsRef.current, scrub: true } }
       );
+      }
 
       //heading scroll trigger opening
       gsap.fromTo(
