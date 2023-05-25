@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import Lenis from '@studio-freight/lenis';
-import dbz from '@assets/sliderImages/dbz.webp';
+import wallpaper0 from '@assets/sliderImages/dbz.webp';
 import wallpaper1 from '@assets/sliderImages/don.webp';
 import wallpaper2 from '@assets/sliderImages/demon.webp';
 import wallpaper3 from '@assets/sliderImages/genji.webp';
@@ -105,14 +105,8 @@ function index() {
         data-mouse-down-at="0"
         data-prev-percentage="0"
       >
-          <img alt="" className="image" src={dbz} draggable="false" />
-          <img
-            alt=""
-            className="image"
-            data-cursor-text="Drag Images!"
-            src={wallpaper1}
-            draggable="false"
-          />
+          <img alt="" className="image" data-cursor-text="Drag Images!" src={wallpaper0} draggable="false" />
+          <img alt="" className="image" src={wallpaper1} draggable="false" />
           <img alt="" className="image" src={wallpaper2} draggable="false" />
           <img alt="" className="image" src={wallpaper3} draggable="false" />
           <img alt="" className="image" src={wallpaper4} draggable="false" />
