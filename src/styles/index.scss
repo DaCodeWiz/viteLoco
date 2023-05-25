@@ -18,6 +18,8 @@
     --small-font-size: 0.875rem;
     --smaller-font-size: 0.813rem;
     --smallest-font-size: 0.75rem;
+    image-rendering: optimizeSpeed;
+    image-orientation: from-image;
   }
 }
 
@@ -31,6 +33,8 @@
     --small-font-size: 0.813rem;
     --smaller-font-size: 0.75rem;
     --smallest-font-size: 0.688rem;
+    image-rendering: optimizeSpeed;
+    image-orientation: from-image;
   }
 }
 
@@ -77,9 +81,13 @@ body {
   }
 
   @include mq("tablet") {
+    image-rendering: optimizeSpeed;
+    image-orientation: from-image;
     font-size: 1.25rem;
   }
   @include mq("phone") {
+    image-rendering: optimizeSpeed;
+    image-orientation: from-image;
     font-size: 1.5rem;
   }
 }

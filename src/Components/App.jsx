@@ -40,7 +40,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="center column">
+    <div
+      className="center column">
       <OrientationMessage />
       {isLoading && <Loading />}
       <React.Suspense fallback={<Loading />}>
