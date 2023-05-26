@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MouseFollower from 'mouse-follower';
-// import Selfie from "./Selfie";
+import MouseFollower from "mouse-follower";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./styles.scss";
@@ -30,7 +29,7 @@ function index() {
     textElements.forEach((element) => {
       gsap.fromTo(
         element,
-        { opacity: 0, y: '1vh' }, // Initial state
+        { opacity: 0, y: "1vh" }, // Initial state
         {
           opacity: 1,
           y: 0,
@@ -47,7 +46,6 @@ function index() {
 
   return (
     <div className="about" data-cursor="-inverse">
-      {/* <Selfie /> */}
       <div className="right-col fade-in-text">
         <h3 className="top-text">
           I'm a student who is mesmerized by clean visuals. Whether it by

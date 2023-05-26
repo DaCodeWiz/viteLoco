@@ -3,6 +3,7 @@ import Lenis from "@studio-freight/lenis";
 import Landing from "./Landing";
 import Footer from "./Footer";
 
+
 function index() {
   useEffect(() => {
     const lenis = new Lenis({
@@ -18,6 +19,7 @@ function index() {
     }
     requestAnimationFrame(raf);
   }, []);
+
   return (
     <>
       <Landing />

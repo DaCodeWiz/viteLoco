@@ -31,7 +31,7 @@ export default function Work() {
       gsap.fromTo(
         text,
         { rotation: 10, opacity: 0, y: () => text.clientHeight * 0.5 },
-        { rotation: 0, y: 0, opacity: 1, duration: 0.7, ease: "power4.easeOut" }
+        { rotation: 0, y: 0, opacity: 1, duration: 0.7, ease: "power4.out" }
       );
     }
   }
@@ -53,7 +53,7 @@ export default function Work() {
           y: -text.clientHeight,
           opacity: 0,
           duration: 0.5,
-          ease: "power4.easeOut",
+          ease: "power4.out",
         }
       );
     }
@@ -73,7 +73,7 @@ export default function Work() {
         gsap.fromTo(
           primera.current,
           { y: -20 },
-          { y: 120, scrollTrigger: { trigger: primera.current, scrub: true } }
+          { y: 120, scrollTrigger: { trigger: primera.current, ease: 'power4.out', scrub: true } }
         );
       }
 
@@ -82,7 +82,7 @@ export default function Work() {
         gsap.fromTo(
           munkey.current,
           { y: -100 },
-          { y: 110, scrollTrigger: { trigger: munkey.current, scrub: true } }
+          { y: 110, scrollTrigger: { trigger: munkey.current, ease: 'power4.out', scrub: true } }
         );
       }
 
@@ -91,7 +91,7 @@ export default function Work() {
       gsap.fromTo(
         beatsRef.current,
         { y: -50 },
-        { y: -120, scrollTrigger: { trigger: beatsRef.current, scrub: true } }
+        { y: -120, scrollTrigger: { trigger: beatsRef.current, ease: 'power4.out', scrub: true } }
       );
       }
 
@@ -108,7 +108,7 @@ export default function Work() {
           y: 0,
           opacity: 1,
           duration: 0.7,
-          ease: "power4.easeOut",
+          ease: "power4.out",
           scrollTrigger: { trigger: heading.current, start: "center bottom" },
         }
       );
